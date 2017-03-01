@@ -1,0 +1,95 @@
+<html>
+
+<head>
+    <script src="cart.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700i" rel="stylesheet">
+</head>
+
+<body>
+    <script>
+        window.onload = function() {
+            window.localStorage.clear();
+            window.sessionStorage.clear();
+        }
+    </script>
+    <div class='container'>
+        <div id="header">
+            <span class="title">Robostaurant</span>
+            <button onclick="showAll()" id="showAllButton">Show Cart</button>
+            <span id="storageArea">Cart is Empty</span>
+        </div>
+    </div>
+    <div class='container'>
+        <div id="totals">
+            <h4 id="subTotal"></h4>
+            <h2 id="grandTotal"></h2>
+            <!--  <a href="#receipt1">Pay</a>-->
+        </div>
+        <div id="musubi">
+            <span class="itemName">Triangle Musubi&nbsp;</span>
+            <br>
+            <span class='price'>$8.95</span>
+            <br>
+            <input type="button" class="button" onclick="addMusubi()" value="Add to cart">
+            <p class="itemDescription">6 pack of our famous musubi made from imported Japanese rice. Hand shaped in house.</p>
+        </div>
+        <div id="edamame">
+            <span class="itemName">House Edamame&nbsp;</span>
+            <br>
+            <span class='price'>$4.95 / 8oz</span>
+            <br>
+            <input type="button" class="button" onclick="addSoybeans()" value="Add to cart">
+            <p class="itemDescription">Farm fresh and locally grown edamame. Steamed to perfection with Kona sea salt and sun dried spices. A perfect snack for any day!</p>
+        </div>
+        <div id="spicyahi">
+            <span class="itemName">Spicy Ahi&nbsp;</span>
+            <br>
+            <span class='price'>$12.95 / 8oz</span>
+            <br>
+            <input type="button" class="button" onclick="addSpicyAhi()" value="Add to cart">
+            <p class="itemDescription">Fresh line caught Ahi rolled in Shichimi, homemade mayo, sea salt, and a mix of our house seasoning placed on a bed of rice. Topped with green onion.</p>
+        </div>
+        <div id="katsu">
+            <span class="itemName">Katsu slider&nbsp;</span> <br>
+            <span class='price'>$9.95 </span>
+            <br>
+            <input type="button" class="button" onclick="addKatsu()" value="Add to cart">
+            <p class="itemDescription">Soft pork rolled in panko flakes and deep fried. Quadrouple folded for proper texture.</p>
+        </div>
+        <div id="oxtail">
+            <span class="itemName">Oxtail soup</span>
+            <br>
+            <span class='price'>$14.95 </span>
+            <br>
+            <input type="button" class="button" onclick="addOxtail()" value="Add to cart">
+            <p class="itemDescription">Slow simmered oxtail with vegetables. Fork tender and the perfect comfort food.</p>
+        </div>
+
+    </div>
+    <br>
+    <!--receipt div-->
+    <!--  Still Needs fixing. Output receipt not showing proper localStorage values.-->
+    <div class="container">
+        <div id="receipt1" class='overlay'>
+            <div class="receipt">
+                <h1>Order Summary:</h1>
+                <p id="outputList"></p>
+                <h2 id='subTotal'>$0.00</h2>
+                <h1 id="grandTotal">$0.00</h1>
+                <script>
+                    displayCheckout();
+                    addTotal();
+                </script>
+
+
+
+                <a class="close" href="#"><span class="itemDescription">[CLOSE]</a>
+
+            </div>
+        </div>
+
+</body>
+
+</html>

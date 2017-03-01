@@ -1,0 +1,219 @@
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: rgb(32, 32, 32);
+        color: rgb(224, 224, 224);
+    }
+
+    img {
+        width: 100%;
+    }
+
+    a: link {
+        border-width: 0px;
+    }
+
+    a: visited {
+        border-width: 0px;
+    }
+    /*---Fixes div box so that the size does not change when padding is applied--*/
+
+    * {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    /*-----------------------*/
+
+    .title {
+        color: white;
+        font-size: 30px;
+        position: relative;
+        top: 5px;
+        left: 5px;
+    }
+
+    #header {
+        height: 50px;
+        width: 100%;
+        background-color: rgb(172, 230, 0);
+    }
+
+    .imageBannerBox {
+        height: 250;
+        overflow: hidden;
+    }
+
+    #imageBannerPage1 {
+        position: relative;
+        margin-top: -250px;
+    }
+
+    .price {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        color: rgb(255, 0, 102);
+    }
+
+    .itemName {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 30px;
+        font-weight: bold;
+        color: rgb(96, 125, 139);
+        background-color: yellow;
+    }
+
+    .itemDescription {
+        font-size: 14px;
+        color: white;
+        background-color: rgba(96, 125, 139, 0.5);
+    }
+
+    #storageArea {
+        float: right;
+        padding-right: 10px;
+        line-height: 50px;
+        color: black;
+    }
+    /*-----------Buttons--------------*/
+
+    #showAllButton {
+        float: right;
+        background-color: rgb(255, 0, 102);
+        height: 50px;
+    }
+
+    .button {
+        background-color: rgb(255, 0, 102);
+        border: none;
+        color: white;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    /*-----------------------*/
+    /*-----------CONTAINER and DIV boxes for food items--------------*/
+
+    .container {
+        width: 100%;
+        margin: auto;
+    }
+
+    #musubi {
+        width: 33.33%;
+        float: left;
+        background-image: url(images/musubi.jpg);
+        background-position: 0px -100px;
+        background-size: cover;
+        padding: 10px;
+        min-height: 200px;
+    }
+
+    #edamame {
+        width: 33.33%;
+        float: left;
+        background-image: url(images/edamame.jpg);
+        background-position: 0px -100px;
+        background-size: cover;
+        padding: 10px;
+        min-height: 200px;
+    }
+
+    #spicyahi {
+        width: 33.33%;
+        float: left;
+        background-image: url(images/spicyahi.jpg);
+        background-position: 0px -100px;
+        background-size: cover;
+        padding: 10px;
+        min-height: 200px;
+    }
+
+    #katsu {
+        width: 33.33%;
+        float: left;
+        background-image: url(images/katsu.jpg);
+        background-size: cover;
+        padding: 10px;
+        min-height: 200px;
+    }
+
+    #oxtail {
+        width: 33.33%;
+        float: left;
+        background-image: url(images/oxtail.jpg);
+        background-size: cover;
+        padding: 10px;
+        min-height: 200px;
+    }
+
+    #totals {
+        width: 33.33%;
+        float: left;
+        background-color: rgb(245, 255, 205);
+        color: rgb(52, 52, 52);
+        text-align: right;
+        padding: 10px;
+        min-height: 200px;
+    }
+    /*Receipt is a popup modal box */
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        transition: opacity 500ms;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .overlay:target {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .receipt {
+        margin: 70px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 5px;
+        width: 60%;
+        position: relative;
+        transition: all 5s ease-in-out;
+    }
+
+    .receipt .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        transition: all 200ms;
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #333;
+    }
+
+    .receipt .close:hover {
+        color: rgb(255, 255, 255);
+    }
+
+    .receipt .content {
+        max-height: 30%;
+        overflow: auto;
+    }
+
+    @media screen and (max-width: 700px) {
+        .box {
+            width: 300px;
+        }
+        .receipt {
+            width: 300px;
+        }
+    }
+    /*-----------------------*/
